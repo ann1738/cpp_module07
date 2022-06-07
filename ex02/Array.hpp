@@ -6,7 +6,7 @@
 /*   By: anasr <anasr@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:11:07 by anasr             #+#    #+#             */
-/*   Updated: 2022/06/07 15:27:05 by anasr            ###   ########.fr       */
+/*   Updated: 2022/06/07 17:18:50 by anasr            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 	T	*array;
 	unsigned int _size;
 public:
-	Array() : array(NULL) {}
+	Array() : array(NULL), _size(0) {}
 
 	Array(unsigned int n) : _size(n)
 	{
@@ -53,12 +53,5 @@ public:
 
 	unsigned int	size(void){return (this->_size);}
 };
-
-template<typename T>
-void	printArray(T &array)
-{
-	for (unsigned int i = 0; i < array.size(); ++i)
-		std::cout << array[i] << " \n";
-}
 
 #endif
